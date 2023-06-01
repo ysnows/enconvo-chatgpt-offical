@@ -8,6 +8,7 @@ def update_appcast(message,repo_name):
     with open('main.yml', 'r') as file:
         yaml_file = yaml.safe_load(file)
         version = yaml_file['version']
+        minAppVersion = yaml_file['minAppVersion']
 
     # 获取hello
     name = repo_name.split('/')[1]
@@ -15,7 +16,7 @@ def update_appcast(message,repo_name):
         "version": version,
         "desc": message,
         "url": f"https://github.com/{repo_name}/releases/download/v{version}/{name}.enconvoplugin",
-        "minAppVersion": "1.1.8"
+        "minAppVersion": minAppVersion
     }
     appcast_file = Path("appcast.json")
     if appcast_file.is_file():
