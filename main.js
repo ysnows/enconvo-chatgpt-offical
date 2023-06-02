@@ -1,9 +1,9 @@
 function main(text, contextText, completion, streamHandler) {
 
     (async () => {
-
         try {
             try {
+                console.log("hello:"+JSON.stringify($option))
                 var completeContent = ""
                 const resp = await $http.stream(
                     $option.customRequest,
