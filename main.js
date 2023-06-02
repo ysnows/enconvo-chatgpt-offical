@@ -15,9 +15,9 @@ function main(text, contextText, completion, streamHandler) {
                         },
                         body: {
                             "model": $option.model,
-                            "temperature": parseInt($option.temperature) || 1,
+                            "temperature": parseFloat($option.temperature) || 1.0,
                             "stream": true,
-                            "messages": contextText.value,
+                            "messages": contextText.value.messages,
                         }
                     },
                     handler = (resp) => {
