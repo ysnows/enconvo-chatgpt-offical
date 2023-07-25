@@ -1,4 +1,4 @@
-name: Chat GPT
+name: OpenAI
 version: 0.0.5
 author: ysnows
 on: {}
@@ -8,7 +8,7 @@ steps:
   env:
     JSFilePath:
       type: file-path
-      value: main.js
+      value: index.js
       sort: 0
       messages: []
 extensionId: enconvo.chatgpt
@@ -66,10 +66,10 @@ options:
     desc: "\u5207\u6362zh_CN\u8BED\u97F3\u89D2\u8272"
     placeholderText: ''
     textWidth: 2e+2
-  - identifier: customRequest
+  - identifier: basePath
     type: text
-    title: Custom Request
-    defaultValue: https://api.openai.com/v1/chat/completions
+    title: basePath
+    defaultValue: https://api.openai.com
     menuValues: []
     desc: ''
     placeholderText: customised request url
