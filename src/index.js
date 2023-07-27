@@ -9,6 +9,7 @@ const {ChatOpenAI} = require("enconvo/llm/openai");
     console.log(`process begin...${JSON.stringify(context)}`)
 
     const chat = new ChatOpenAI({
+        modelName: options.model,
         streaming: true,
         temperature: +options.temperature,
         openAIApiKey: options.apiKey,
