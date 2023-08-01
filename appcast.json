@@ -2,6 +2,12 @@
   "identifier": "enconvo.chatgpt",
   "versions": [
     {
+      "version": "0.0.6",
+      "desc": "Bump version to 0.0.6",
+      "url": "https://github.com/ysnows/enconvo-chatgpt-offical/releases/download/v0.0.6/enconvo-chatgpt-offical.enconvoplugin",
+      "minAppVersion": "1.2.1"
+    },
+    {
       "version": "0.0.5",
       "desc": "添加新的模型",
       "url": "https://github.com/ysnows/enconvo-chatgpt-offical/releases/download/v0.0.5/enconvo-chatgpt-offical.enconvoplugin",
