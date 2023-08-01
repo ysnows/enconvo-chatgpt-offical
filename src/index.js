@@ -7,6 +7,8 @@ const {ChatOpenAI} = require("enconvo/llm/openai");
 (async () => {
     const {context, options} = req.body();
     console.log(`process begin...${JSON.stringify(context)}`)
+    let url = new URL(options.basePath)
+    options.basePath = `${url.protocol}://${url.host}`
 
     const chat = new ChatOpenAI({
         modelName: options.model,
